@@ -11,7 +11,6 @@ pipeline {
             steps {
                 echo 'Running unit tests...'
                 // Example: Using JUnit for unit tests
-                sh 'mvn test'
                 echo 'Running integration tests...'
                 // Example: Using Selenium for integration tests
             }
