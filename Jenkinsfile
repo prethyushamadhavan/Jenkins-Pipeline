@@ -55,6 +55,7 @@ pipeline {
                 subject: 'SUCCESS: Jenkins Pipeline',
                 body: '''<p>The Pipeline has completed successfully.</p>
                          <p>Check console output at <a href="${BUILD_URL}console">here</a> to view the full results.</p>''',
+                mimeType : 'text/html',
                 attachLog: true
             )
         }
@@ -64,6 +65,7 @@ pipeline {
                 subject: 'FAILURE: Jenkins Pipeline',
                 body: '''<p>The Pipeline has failed.</p>
                          <p>Check console output at <a href="${BUILD_URL}console">here</a> to view the full results.</p>''',
+                mimeType : 'text/html',
                 attachLog: true
             )
         }
