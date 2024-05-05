@@ -51,20 +51,32 @@ pipeline {
     post {
         success {
             emailext(
-                to: 's224036416@deakin.edu.au',
                 subject: 'SUCCESS: Jenkins Pipeline',
-                body: '''<p>The Pipeline has completed successfully.</p>
-                         <p>Check console output at <a href="${BUILD_URL}console">here</a> to view the full results.</p>''',
+                body: ''' <html>
+                            <body>
+                         <p>The Pipeline has completed successfully.</p>
+                         <p>Check console output at <a href="${BUILD_URL}console">here</a> to view the full results.</p>
+                            </body>
+                          <html>''',
+                to: 's224036416@deakin.edu.au',
+                from: 'notifications@deakin.edu.au',
+                replyTo: 'notifications@deakin.edu.au',
                 mimeType : 'text/html',
                 attachLog: true
             )
         }
         failure {
             emailext(
-                to: 's224036416@deakin.edu.au',
                 subject: 'FAILURE: Jenkins Pipeline',
-                body: '''<p>The Pipeline has failed.</p>
-                         <p>Check console output at <a href="${BUILD_URL}console">here</a> to view the full results.</p>''',
+                body: '''<html>
+                            <body>
+                             <p>The Pipeline has failed.</p>
+                             <p>Check console output at <a href="${BUILD_URL}console">here</a> to view the full results.</p>
+                            </body>
+                          <html>''',
+                 to: 's224036416@deakin.edu.au',
+                from: 'notifications@deakin.edu.au',
+                replyTo: 'notifications@deakin.edu.au',
                 mimeType : 'text/html',
                 attachLog: true
             )
