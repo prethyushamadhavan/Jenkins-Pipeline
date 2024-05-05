@@ -50,22 +50,20 @@ pipeline {
 
     post {
         success {
-            echo 'Pipeline executed successfully!'
-            // Example: Send email notification for successful execution
-            emailext (
+            emailext(
                 to: 's224036416@deakin.edu.au',
-                subject: ' Jenkins Build Successful',
-                body: 'The build executed successfully.'
+                subject: 'SUCCESS: Jenkins Pipeline',
+                body: '''<p>The Pipeline has completed successfully.</p>
+                         <p>Check console output at <a href="${BUILD_URL}console">here</a> to view the full results.</p>''',
                 attachLog: true
             )
         }
         failure {
-            echo 'Pipeline execution failed!'
-            // Example: Send email notification for failed execution
-            emailext (
+            emailext(
                 to: 's224036416@deakin.edu.au',
-                subject: 'Jenkins Build Failed',
-                body: 'The build failed. Please check logs for details.',
+                subject: 'FAILURE: Jenkins Pipeline',
+                body: '''<p>The Pipeline has failed.</p>
+                         <p>Check console output at <a href="${BUILD_URL}console">here</a> to view the full results.</p>''',
                 attachLog: true
             )
         }
