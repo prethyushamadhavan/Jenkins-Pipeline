@@ -49,6 +49,7 @@ pipeline {
     }
 
     post {
+        always {
         success {
             emailext(
                 subject: 'SUCCESS: Jenkins Pipeline',
@@ -80,6 +81,7 @@ pipeline {
                 mimeType : 'text/html',
                 attachLog: true
             )
+        }
         }
     }
 }
