@@ -43,26 +43,24 @@ pipeline {
             steps {
                 echo 'Deploying to production server...'
                 // Example: Using Jenkins Deploy Plugin or AWS CLI for deployment
-                
             }
         }
     }
 
-    post {
-        always {
+    post {           
         success {
             emailext(
                 subject: 'SUCCESS: Jenkins Pipeline',
-                body: ''' <html>
+                body: '''<html>
                             <body>
                          <p>The Pipeline has completed successfully.</p>
                          <p>Check console output at <a href="${BUILD_URL}console">here</a> to view the full results.</p>
                             </body>
-                          <html>''',
+                          </html>''',
                 to: 's224036416@deakin.edu.au',
                 from: 'notifications@deakin.edu.au',
                 replyTo: 'notifications@deakin.edu.au',
-                mimeType : 'text/html',
+                mimeType: 'text/html',
                 attachLog: true
             )
         }
@@ -74,14 +72,13 @@ pipeline {
                              <p>The Pipeline has failed.</p>
                              <p>Check console output at <a href="${BUILD_URL}console">here</a> to view the full results.</p>
                             </body>
-                          <html>''',
-                 to: 's224036416@deakin.edu.au',
+                          </html>''',
+                to: 's224036416@deakin.edu.au',
                 from: 'notifications@deakin.edu.au',
                 replyTo: 'notifications@deakin.edu.au',
-                mimeType : 'text/html',
+                mimeType: 'text/html',
                 attachLog: true
             )
-        }
         }
     }
 }
