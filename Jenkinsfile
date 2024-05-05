@@ -56,6 +56,7 @@ pipeline {
                 to: 's224036416@deakin.edu.au',
                 subject: ' Jenkins Build Successful',
                 body: 'The build executed successfully.'
+                attachLog: true
             )
         }
         failure {
