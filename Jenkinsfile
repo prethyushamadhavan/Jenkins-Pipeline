@@ -57,7 +57,7 @@ pipeline {
                          <p>Check console output at <a href="${BUILD_URL}console">here</a> to view the full results.</p>
                             </body>
                           </html>''',
-                to: 's224036416@deakin.edu.au',
+                to: 'prethyushamadhavan@gmail.com',
                 from: 'notifications@deakin.edu.au',
                 replyTo: 'notifications@deakin.edu.au',
                 mimeType: 'text/html',
@@ -73,7 +73,7 @@ pipeline {
                              <p>Check console output at <a href="${BUILD_URL}console">here</a> to view the full results.</p>
                             </body>
                           </html>''',
-                to: 's224036416@deakin.edu.au',
+                to: 'prethyushamadhavan@gmail.com',
                 from: 'notifications@deakin.edu.au',
                 replyTo: 'notifications@deakin.edu.au',
                 mimeType: 'text/html',
