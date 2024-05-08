@@ -58,7 +58,6 @@ pipeline {
                             </body>
                           </html>''',
                 to: 'prethyushamadhavan@gmail.com',
-                from: 'jenkins@gmail.com',
                 replyTo: 'notification@jenkins.com',
                 mimeType: 'text/html',
                 attachLog: true
@@ -74,7 +73,6 @@ pipeline {
                             </body>
                           </html>''',
                 to: 'prethyushamadhavan@gmail.com',
-                from: 'jenkins@gmail.com',
                 replyTo: 'notification@jenkins.com',
                 mimeType: 'text/html',
                 attachLog: true
