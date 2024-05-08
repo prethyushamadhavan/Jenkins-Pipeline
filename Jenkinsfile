@@ -50,7 +50,7 @@ pipeline {
     post {           
         success {
             emailext(
-                
+                subject: '$DEFAULT_SUBJECT',
                 body: '''<html>
                             <body>
                          <p>The Pipeline build has completed successfully.</p>
