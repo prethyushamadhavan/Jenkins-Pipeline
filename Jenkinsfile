@@ -58,7 +58,7 @@ pipeline {
                             </body>
                           </html>''',
                 to: 'prethyushamadhavan@gmail.com',
-                from: 'notification@jenkins.com',
+                from: 'notification@deakin.edu.au',
                 replyTo: 'notification@jenkins.com',
                 mimeType: 'text/html',
                 attachLog: true
