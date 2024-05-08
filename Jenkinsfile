@@ -12,31 +12,31 @@ pipeline {
                 echo 'Running unit tests...'
                echo 'Using JUnit for unit tests'
                 echo 'Running integration tests...'
-                echo 'Using Selenium for integration tests.
+                echo 'Using Selenium for integration tests.'
             }
         }
         stage('Code Analysis') {
             steps {
                 echo 'Analyzing code...'
-                // Example: Using SonarQube for code analysis
+                echo 'Example: Using SonarQube for code analysis'
             }
         }
         stage('Security Scan') {
             steps {
                 echo 'Performing security scan...'
-                // Example: Using OWASP ZAP for security scan
+                echo 'Example: Using OWASP ZAP for security scan'
             }
         }
         stage('Deploy to Staging') {
             steps {
                 echo 'Deploying to staging server...'
-                // Example: Using Jenkins Deploy Plugin or AWS CLI for deployment
+                echo 'Example: Using Jenkins Deploy Plugin or AWS CLI for deployment.'
             }
         }
         stage('Integration Tests on Staging') {
             steps {
                 echo 'Running integration tests on staging...'
-                // Example: Using Selenium for integration tests
+                echo 'Example: Using Selenium for integration tests.'
             }
         }
         stage('Deploy to Production') {
