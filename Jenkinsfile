@@ -59,7 +59,6 @@ pipeline {
                           </html>''',
                 to: 'prethyushamadhavan@gmail.com',
                 from: 'notifications@deakin.edu.au',
-                replyTo: 'notifications@deakin.edu.au',
                 mimeType: 'text/html',
                 attachLog: true
             )
@@ -75,7 +74,6 @@ pipeline {
                           </html>''',
                 to: 'prethyushamadhavan@gmail.com',
                 from: 'notifications@deakin.edu.au',
-                replyTo: 'notifications@deakin.edu.au',
                 mimeType: 'text/html',
                 attachLog: true
             )
