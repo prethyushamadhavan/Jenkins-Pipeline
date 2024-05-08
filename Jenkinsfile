@@ -50,7 +50,7 @@ pipeline {
     post {           
         success {
             emailext(
-               subject: 'SUCCESS: Jenkins Pipeline  #${env.BUILD_NUMBER}',
+               subject: "SUCCESS: Jenkins Pipeline  #${env.BUILD_NUMBER}",
                 body: '''<html>
                             <body>
                          <p>The Pipeline build has completed successfully.</p>
@@ -59,13 +59,14 @@ pipeline {
                           </html>''',
                 to: 'prethyushamadhavan@gmail.com',
                 from: 'notification@jenkins.com',
+                replyTo: 'notification@jenkins.com',
                 mimeType: 'text/html',
                 attachLog: true
             )
         }
         failure {
             emailext(
-                subject: 'FAILURE: Jenkins Pipeline  #${env.BUILD_NUMBER}',
+                subject: "FAILURE: Jenkins Pipeline  #${env.BUILD_NUMBER}",
                 body: '''<html>
                             <body>
                              <p>The Pipeline build has failed.</p>
@@ -74,6 +75,7 @@ pipeline {
                           </html>''',
                 to: 'prethyushamadhavan@gmail.com',
                 from: 'notification@jenkins.com',
+                replyTo: 'notification@jenkins.com',
                 mimeType: 'text/html',
                 attachLog: true
             )
