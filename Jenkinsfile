@@ -50,7 +50,7 @@ pipeline {
     post {           
         success {
             emailext(
-                subject: '$DEFAULT_SUBJECT',
+               subject: 'SUCCESS: Jenkins Pipeline  #${env.BUILD_NUMBER}',
                 body: '''<html>
                             <body>
                          <p>The Pipeline build has completed successfully.</p>
@@ -65,7 +65,7 @@ pipeline {
         }
         failure {
             emailext(
-                subject: 'FAILURE: Jenkins Pipeline',
+                subject: 'FAILURE: Jenkins Pipeline  #${env.BUILD_NUMBER}',
                 body: '''<html>
                             <body>
                              <p>The Pipeline build has failed.</p>
