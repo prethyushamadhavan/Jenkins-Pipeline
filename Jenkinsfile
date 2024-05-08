@@ -12,7 +12,7 @@ pipeline {
                 echo 'Running unit tests...'
                echo 'Using JUnit for unit tests'
                 echo 'Running integration tests...'
-                echo 'Using Selenium for integration tests.
+                echo 'Using Selenium for integration tests.'
             }
         }
         stage('Code Analysis') {
