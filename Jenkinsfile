@@ -12,7 +12,7 @@ pipeline {
                 echo 'Running unit tests...'
                echo 'Using JUnit for unit tests'
                 echo 'Running integration tests...'
-                echo 'Using Selenium for integration tests.'
+                echo 'Using Selenium for integration tests.
             }
         }
         stage('Code Analysis') {
@@ -53,12 +53,12 @@ pipeline {
                 subject: 'SUCCESS: Jenkins Pipeline',
                 body: '''<html>
                             <body>
-                         <p>The Pipeline has completed successfully.</p>
+                         <p>The Pipeline build has completed successfully.</p>
                          <p>Check console output at <a href="${BUILD_URL}console">here</a> to view the full results.</p>
                             </body>
                           </html>''',
                 to: 'prethyushamadhavan@gmail.com',
-                from: 'notifications@deakin.edu.au',
+                from: 'notification@jenkins.com',
                 mimeType: 'text/html',
                 attachLog: true
             )
@@ -68,12 +68,12 @@ pipeline {
                 subject: 'FAILURE: Jenkins Pipeline',
                 body: '''<html>
                             <body>
-                             <p>The Pipeline has failed.</p>
+                             <p>The Pipeline build has failed.</p>
                              <p>Check console output at <a href="${BUILD_URL}console">here</a> to view the full results.</p>
                             </body>
                           </html>''',
                 to: 'prethyushamadhavan@gmail.com',
-                from: 'notifications@deakin.edu.au',
+                from: 'notification@jenkins.com',
                 mimeType: 'text/html',
                 attachLog: true
             )
