@@ -42,7 +42,7 @@ pipeline {
         stage('Deploy to Production') {
             steps {
                 echo 'Deploying to production server...'
-                // Example: Using Jenkins Deploy Plugin or AWS CLI for deployment
+                echo 'Example: Using Jenkins Deploy Plugin or AWS CLI for deployment.'
             }
         }
     }
